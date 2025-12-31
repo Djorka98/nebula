@@ -16,7 +16,7 @@ describe('useSectionInView', () => {
     const intersectionObserverStub = vi.fn().mockImplementation((callback: IntersectionObserverCallback) => {
       return {
         observe: (...args: Parameters<IntersectionObserver['observe']>) => {
-          observeMock(...args);
+          (observeMock as unknown as (...a: any[]) => void)(...args);
           callback(
             [
               {
