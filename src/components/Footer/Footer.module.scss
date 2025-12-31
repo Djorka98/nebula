@@ -1,0 +1,191 @@
+.footer {
+  margin-top: clamp(var(--space-3xl), 8vw, var(--space-6xl));
+  padding-block: clamp(64px, 9vw, 96px) clamp(32px, 6vw, 48px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(150% 150% at 50% -40%, rgba(124, 140, 255, 0.18), transparent 55%),
+    linear-gradient(180deg, rgba(6, 8, 16, 0.9), rgba(5, 7, 12, 0.96));
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(180% 90% at 50% 0%, rgba(72, 92, 196, 0.08), transparent 65%);
+  pointer-events: none;
+}
+
+.backdrop {
+  position: absolute;
+  inset: auto 8% -55% 8%;
+  height: clamp(280px, 30vw, 420px);
+  border-radius: 60% 60% 0 0;
+  background: radial-gradient(circle at 50% 50%, rgba(124, 140, 255, 0.32), transparent 70%);
+  filter: blur(140px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  gap: clamp(48px, 6vw, 12px);
+  color: var(--color-text-secondary);
+  z-index: 1;
+}
+
+.content {
+  display: grid;
+  gap: clamp(40px, 7vw, 12px);
+  grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
+  align-items: start;
+
+  @media (max-width: 75rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 50rem) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.brandColumn {
+  display: grid;
+  gap: clamp(24px, 5vw, 44px);
+}
+
+.brandHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.badge {
+  justify-self: start;
+  width: max-content;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+    rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.46);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 48px rgba(14, 18, 32, 0.35);
+}
+
+.wordmark {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.tagline {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.linksColumn {
+  display: grid;
+  gap: clamp(20px, 4vw, 32px);
+  padding-block: clamp(8px, 2vw, 12px);
+  padding-inline: clamp(4px, 2vw, 16px);
+}
+
+.columnTitle {
+  margin: 0;
+  font-size: 0.88rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.links {
+  display: grid;
+  gap: clamp(16px, 3vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links li {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: var(--space-4xs) 0;
+  transition: color var(--duration-fast) var(--ease-soft),
+    transform var(--duration-fast) var(--ease-soft);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--color-text-primary);
+  transform: translateX(4px);
+}
+
+.contactColumn {
+  display: grid;
+  gap: clamp(0px, 1vw, 10px);
+  padding-block: clamp(8px, 2vw, 12px);
+  padding-inline: clamp(4px, 2vw, 16px);
+}
+
+.contactList {
+  display: grid;
+  gap: clamp(var(--space-sm), 3vw, var(--space-lg));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contactList li {
+  display: grid;
+  gap: var(--space-3xs);
+}
+
+.contactLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.contactLink {
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color var(--duration-fast) var(--ease-soft);
+  margin: 12px 0 18px;
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+  color: var(--color-text-primary);
+}
+
+.bottomBar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 5vw, 28px);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: clamp(var(--space-lg), 5vw, var(--space-2xl));
+}
+
+.legalBlock {
+  margin: 12px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  margin-inline: auto;
+}

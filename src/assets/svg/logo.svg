@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nebula One logo">
+  <defs>
+    <linearGradient id="nebula-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c8cff" />
+      <stop offset="100%" stop-color="#9c6cff" />
+    </linearGradient>
+  </defs>
+  <circle cx="16" cy="16" r="15" fill="url(#nebula-gradient)" opacity="0.85" />
+  <path d="M16 6c5.523 0 10 4.477 10 10s-4.477 10-10 10S6 21.523 6 16 10.477 6 16 6zm0 3.2a6.8 6.8 0 1 0 6.8 6.8A6.8 6.8 0 0 0 16 9.2z" fill="#ffffff" opacity="0.9" />
+</svg>

@@ -1,0 +1,174 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hero > matches snapshot 1`] = `
+<div>
+  <section
+    aria-label="Nebula One hero"
+    class="section _hero_50a94f"
+    id="hero"
+  >
+    <div
+      aria-hidden="true"
+      class="_backdrop_50a94f"
+    >
+      <img
+        alt=""
+        decoding="async"
+        loading="lazy"
+        src="/src/assets/images/hero_bg.webp"
+      />
+    </div>
+    <div
+      class="container _wrap_50a94f"
+    >
+      <div
+        class="_copy_50a94f"
+      >
+        <span
+          style="opacity: 0;"
+        >
+          <span
+            class="_badge_37c1a7 _brand_37c1a7 _sm_37c1a7"
+          >
+            <span
+              class="_label_37c1a7"
+            >
+              Nuevo
+            </span>
+          </span>
+        </span>
+        <h1
+          class="typography_typography_headline__u6qmr50 _headline_50a94f"
+          style="opacity: 0; transform: translateY(40px) translateZ(0);"
+        >
+          Nebula One
+        </h1>
+        <p
+          class="typography_typography_body__u6qmr52"
+          style="opacity: 0;"
+        >
+          Una pieza de ingeniería suave como la luz. Potencia cuántica, batería adaptativa y audio inmersivo en 6 mm de espesor.
+        </p>
+        <div
+          class="_ctas_50a94f"
+        >
+          <div
+            style="opacity: 0; transform: scale(0.92) translateZ(0);"
+          >
+            <button
+              aria-busy="false"
+              aria-live="polite"
+              class="_button_f8f296 _primary_f8f296 _lg_f8f296"
+              data-variant="primary"
+              type="button"
+            >
+              <span
+                class=""
+              >
+                Reserva ahora
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="_metrics_50a94f"
+          style="opacity: 0;"
+        >
+          <div
+            class="_metric_50a94f"
+          >
+            <span
+              class="_metricValue_50a94f"
+            >
+              1.2M+ 
+            </span>
+            <span
+              class="_metricLabel_50a94f"
+            >
+              micro sensores
+            </span>
+            <p
+              class="_metricDescription_50a94f"
+            >
+              Lecturas biométricas por segundo para anticiparse a tu intención.
+            </p>
+          </div>
+          <div
+            class="_metric_50a94f"
+          >
+            <span
+              class="_metricValue_50a94f"
+            >
+              8.5 g
+            </span>
+            <span
+              class="_metricLabel_50a94f"
+            >
+              peso lunar
+            </span>
+            <p
+              class="_metricDescription_50a94f"
+            >
+              Un equilibrio perfecto entre materiales ultraligeros y solidez estructural.
+            </p>
+          </div>
+          <div
+            class="_metric_50a94f"
+          >
+            <span
+              class="_metricValue_50a94f"
+            >
+              6 mm
+            </span>
+            <span
+              class="_metricLabel_50a94f"
+            >
+              perfil esbelto
+            </span>
+            <p
+              class="_metricDescription_50a94f"
+            >
+              Curvatura 3D moldeada con precisión para un agarre impecable.
+            </p>
+          </div>
+        </div>
+        <div
+          style="opacity: 0;"
+        >
+          <p
+            class="typography_typography_caption__u6qmr54 _caption_50a94f"
+          >
+            Entrega estimada a partir de noviembre. Stock limitado.
+          </p>
+        </div>
+      </div>
+      <div
+        class="_deviceColumn_50a94f"
+        style="opacity: 0; transform: translateY(18px) scale3d(1.02, 1.02, 1);"
+      >
+        <span
+          aria-hidden="true"
+          class="_deviceAura_50a94f"
+        />
+        <div
+          class="_deviceFrame_50a94f"
+        >
+          <picture>
+            <source
+              srcset="/src/assets/images/device@1x.webp 1x, /src/assets/images/device@2x.webp 2x"
+              type="image/webp"
+            />
+            <img
+              alt="Nebula One flotando en un haz de luz"
+              class="_devicePicture_50a94f"
+              decoding="async"
+              loading="lazy"
+              src="/src/assets/images/device@1x.webp"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

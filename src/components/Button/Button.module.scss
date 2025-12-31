@@ -1,0 +1,141 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-soft),
+    box-shadow var(--duration-fast) var(--ease-soft),
+    border-color var(--duration-fast) var(--ease-soft),
+    background-color var(--duration-fast) var(--ease-soft),
+    color var(--duration-fast) var(--ease-soft);
+  will-change: transform;
+  color: var(--color-text-primary);
+  background: transparent;
+  overflow: hidden;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.18), transparent 65%);
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity var(--duration-base) var(--ease-soft),
+    transform var(--duration-base) var(--ease-soft);
+  pointer-events: none;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.button:not(:disabled):hover::after {
+  opacity: 0.65;
+  transform: scale(1);
+}
+
+.button:not(:disabled):active {
+  transform: translateY(0) scale(1);
+}
+
+.button:not(:disabled):active::after {
+  opacity: 0.45;
+  transform: scale(0.98);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(124, 140, 255, 0.65);
+}
+
+.primary {
+  background: linear-gradient(135deg, #7aa2ff, #5b7fff);
+  color: #0b1020;
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 8px 24px rgba(122, 162, 255, 0.3);
+}
+
+.primary:not(:disabled):hover {
+  box-shadow: 0 16px 42px rgba(122, 162, 255, 0.35);
+}
+
+.primary:not(:disabled):active {
+  box-shadow: 0 6px 18px rgba(122, 162, 255, 0.28);
+}
+
+.secondary {
+  background: rgba(12, 16, 26, 0.4);
+  border-color: var(--color-line);
+  color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 28px rgba(8, 12, 24, 0.32);
+  backdrop-filter: blur(12px);
+}
+
+.secondary:not(:disabled):hover {
+  border-color: rgba(124, 140, 255, 0.45);
+  box-shadow: 0 14px 38px rgba(8, 12, 24, 0.4);
+}
+
+.ghost {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.ghost:not(:disabled):hover {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.875rem;
+  min-height: 2.25rem;
+}
+
+.md {
+  padding: 0.6rem 1.35rem;
+  font-size: 0.975rem;
+  min-height: 2.75rem;
+}
+
+.lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+  min-height: 3.1rem;
+}
+
+.loadingIndicator {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: rgba(255, 255, 255, 0.95);
+  animation: spin 0.8s linear infinite;
+}
+
+.labelHidden {
+  opacity: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

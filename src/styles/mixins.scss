@@ -1,0 +1,74 @@
+@mixin smooth($props: all, $dur: var(--dur-base), $ease: var(--ease-out)) {
+  transition: $props $dur $ease;
+  will-change: transform, opacity, box-shadow, filter;
+}
+
+.interactive {
+  @include smooth();
+  transform: translateZ(0);
+  transition-delay: 40ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive {
+    transition: none !important;
+  }
+}
+
+@mixin glass($blur: 28px, $alpha: 0.32) {
+  backdrop-filter: blur($blur);
+  background-color: rgba(17, 22, 36, $alpha);
+  box-shadow: 0 24px 60px rgba(4, 6, 12, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@mixin container($max: 1120px, $padding: 24px) {
+  width: min($max, 100% - ($padding * 2));
+  margin-inline: auto;
+}
+
+@mixin gradient-edge($from: rgba(255, 255, 255, 0.12)) {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: radial-gradient(800px 600px at 50% 0%, $from, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@mixin responsive($property, $min, $max, $viewport-min: 480px, $viewport-max: 1536px) {
+  #{$property}: clamp($min, calc(#{$min} + (#{$max} - #{$min}) * ((100vw - #{$viewport-min}) / (#{$viewport-max} - #{$viewport-min}))), $max);
+}
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin text-break-words() {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+@mixin fluid-heading($min, $max, $viewport-min: 360px, $viewport-max: 1440px) {
+  font-size: clamp(
+    $min,
+    calc(
+      #{$min} + (#{$max} - #{$min}) * ((100vw - #{$viewport-min}) / (#{$viewport-max} - #{$viewport-min}))
+    ),
+    $max
+  );
+}
